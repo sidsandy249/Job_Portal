@@ -1,0 +1,65 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+body{
+    background-image: url('image/signup_image.jpg');
+}
+
+
+.logo a {
+    font-size: 50px;
+    font-weight: 700px;
+    margin-left: 20px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: whitesmoke;
+    text-decoration: none;
+}
+
+.container{
+    margin-left: 400px;
+    margin-top: 80px;
+    width:  600px;
+    height: 500px;
+    border: 2px solid black;
+    background-image: url('image/login\ image.jpg');
+}
+
+.join{
+    text-align: center;
+}
+
+.log{
+    text-align: center;
+    margin-top: 40px;
+}
+
+.email{
+       margin-top: 40px;
+       text-align: center;
+}
+
+.btn{
+    margin-top: 20px;
+    margin-left: 240px;
+    height: 30px;
+    width: 130px;
+    border: none;
+    border-radius: 10px;
+    background-color: blue;
+    color: white;
+    cursor: pointer;
+}
+
+.sign{
+    text-align: center;
+    margin-top: 20px;
+    margin-right: 40px;
+}
+
+.signup{
+    text-decoration: none;
+}
