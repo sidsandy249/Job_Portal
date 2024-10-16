@@ -41,7 +41,64 @@
     
             if (!emailInput) {
                 alert('Please enter your email.');
+                return;<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <title>login form</title>
+    <link rel="stylesheet" href="css/login.css">
+</head>
+<body>
+
+        <div class="logo">
+            <a href="index.html"><b>Job Dekho</b></a>
+        </div>
+
+       <a href=""></a>
+        
+    <main>
+            <div class="login">
+
+                <h1 class="log"> Log In </h1>
+               
+                <div class="email">
+                    <input type="email" id ="email" name="email" placeholder="Email"  required> <br><br>
+                    <input type="password" id="pass" name="pass"   placeholder="Password" required> <br><br>
+                </div>
+  
+                <button class="btn" onclick="handleLogin()">Login</button>
+
+                <p class="sign">
+                    don't have an account ? 
+
+                    <a href="sign_up.html" class="signup">Sign Up</a>
+                </p>
+
+                
+            </div>
+
+    </main>
+
+    <script>
+        function handleLogin() {
+            const emailInput = document.getElementById('email').value;
+    
+            if (!emailInput) {
+                alert('Please enter your email.');
                 return;
+            }
+    
+            alert('Login Successfully');
+        }
+    
+        // Disable the button if the email input is empty
+        document.getElementById('email').addEventListener('input', function() {
+            const emailInput = document.getElementById('email').value;
+            document.getElementById('loginButton').disabled = !emailInput;
+        });
+    </script>
+</body>
+</html>
             }
     
             alert('Login Successfully');
