@@ -59,6 +59,11 @@ body{
     cursor: pointer;
 }
 
+ .btn:disabled {
+        background-color: grey;
+        cursor: not-allowed;
+    }
+
 .sign{
     text-align: center;
     margin-top: 20px;
