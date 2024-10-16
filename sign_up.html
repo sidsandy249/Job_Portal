@@ -26,7 +26,7 @@
                     <input type="password" id="pass" name="pass"   placeholder="Confirm Password" required> <br><br>
                 </div>
 
-                <button class="btn" onclick="alert('Your Account Has Been Created')">SignUp</button>
+                <button class="btn" id="signupButton" onclick="handleSignUp()">SignUp</button>
 
                 <p class="sign">
                     Already have an account?
@@ -36,6 +36,33 @@
         </div>
 
     </main>
+
+     <script>
+        function handleSignUp() {
+            const emailInput = document.getElementById('email').value;
+            const passwordInput = document.getElementById('password').value;
+            const confirmPasswordInput = document.getElementById('confirmPassword').value;
+    
+            if (!emailInput) {
+                alert('Please enter your email.');
+                return;
+            }
+    
+            if (passwordInput !== confirmPasswordInput) {
+                alert('Passwords do not match.');
+                return;
+            }
+    
+            alert('Your Account Has Been Created');
+        }
+    
+        // Disable the button if the email input is empty
+        document.getElementById('email').addEventListener('input', function() {
+            const emailInput = document.getElementById('email').value;
+            document.getElementById('signupButton').disabled = !emailInput;
+        });
+    </script>
+       
        
 </body>
 </html>
