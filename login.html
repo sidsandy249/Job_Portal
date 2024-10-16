@@ -23,7 +23,7 @@
                     <input type="password" id="pass" name="pass"   placeholder="Password" required> <br><br>
                 </div>
   
-                <button class="btn" onclick="alert('Login Sucessfully')">Login</button>
+                <button class="btn" onclick="handleLogin()">Login</button>
 
                 <p class="sign">
                     don't have an account ? 
@@ -35,5 +35,23 @@
             </div>
 
     </main>
+     <script>
+        function handleLogin() {
+            const emailInput = document.getElementById('email').value;
+    
+            if (!emailInput) {
+                alert('Please enter your email.');
+                return;
+            }
+    
+            alert('Login Successfully');
+        }
+    
+        // Disable the button if the email input is empty
+        document.getElementById('email').addEventListener('input', function() {
+            const emailInput = document.getElementById('email').value;
+            document.getElementById('loginButton').disabled = !emailInput;
+        });
+    </script>
 </body>
 </html>
